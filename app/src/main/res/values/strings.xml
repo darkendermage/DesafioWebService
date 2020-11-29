@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">desafio3_webservices</string>
+    <string name="spiderman">spiderman</string>
+    <string name="marvel">MARVEL</string>
 </resources>
