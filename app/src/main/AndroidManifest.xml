@@ -11,14 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Desafio3_webservices">
-        <activity android:name=".SplashActivity"></activity>
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".domain.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".domain.LoginActivity" />
+        <activity android:name=".domain.CadastroActivity"/>
+        <activity android:name=".domain.MainActivity" />
     </application>
 
 </manifest>

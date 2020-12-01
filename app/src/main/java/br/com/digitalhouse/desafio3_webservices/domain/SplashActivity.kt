@@ -1,8 +1,10 @@
-package br.com.digitalhouse.desafio3_webservices
+package br.com.digitalhouse.desafio3_webservices.domain
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import br.com.digitalhouse.desafio3_webservices.R
+import br.com.digitalhouse.desafio3_webservices.domain.MainActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -18,7 +20,7 @@ class SplashActivity : AppCompatActivity() {
         val splash = this
         scopeSplash.launch {
             delay(5000)
-            startActivity(Intent(splash, MainActivity::class.java))
+            startActivity(Intent(splash, LoginActivity::class.java))
             finish()
         }
     }
