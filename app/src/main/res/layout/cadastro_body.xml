@@ -5,13 +5,36 @@
     android:background="@drawable/round_body"
     android:orientation="vertical">
 
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:text="@string/name"
+        android:textColor="@color/redMarvel"
+        android:textStyle="bold" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="10dp"
         android:text="@string/email"
         android:textColor="@color/redMarvel"
-        android:paddingLeft="10dp"
         android:textStyle="bold" />
 
 
@@ -29,10 +52,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="10dp"
         android:text="@string/password"
         android:textColor="@color/redMarvel"
-        android:paddingLeft="10dp"
 
         android:textStyle="bold" />
 
@@ -47,34 +70,15 @@
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
-
-    <com.google.android.material.checkbox.MaterialCheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:buttonTint="@color/redMarvel"
-        android:text="@string/remember"
-        android:textStyle="bold">
-
-    </com.google.android.material.checkbox.MaterialCheckBox>
-
-
     <Button
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:background="@drawable/round_button"
-        android:text="@string/btn_login"
+        android:text="@string/register"
         android:textColor="@color/white"
         android:textSize="20dp" />
-
-    <TextView
-        android:id="@+id/btn_cadastre_se"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="25dp"
-        android:text="@string/create_account"
-        android:textStyle="bold" />
 
 
 </LinearLayout>
