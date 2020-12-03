@@ -48,24 +48,24 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    <com.google.android.material.checkbox.MaterialCheckBox
-        android:layout_width="wrap_content"
+    <CheckBox
+        android:id="@+id/checkboxLogin"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:buttonTint="@color/redMarvel"
         android:text="@string/remember"
-        android:textStyle="bold">
-
-    </com.google.android.material.checkbox.MaterialCheckBox>
+        android:textColor="@color/black"
+        android:textStyle="bold" />
 
 
     <Button
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/round_button"
+        android:background="@drawable/round_body"
         android:text="@string/btn_login"
         android:textColor="@color/white"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/btn_cadastre_se"
@@ -73,6 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
+        android:textColor="@color/redMarvel"
         android:text="@string/create_account"
         android:textStyle="bold" />
 
