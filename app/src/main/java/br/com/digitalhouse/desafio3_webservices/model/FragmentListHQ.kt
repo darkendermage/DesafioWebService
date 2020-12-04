@@ -18,7 +18,8 @@ import kotlinx.android.synthetic.main.fragment_list_h_q.view.*
 
 class FragmentListHQ : Fragment(), ListHQAdapter.onClickHQ{
 
-    var offset = 1
+    var offset = 500
+
     private lateinit var adapterHQ: ListHQAdapter
     private lateinit var layoutManagerHQ: GridLayoutManager
 
