@@ -12,11 +12,11 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/iv_itemHQ"
+            android:id="@+id/iv_iHQ"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="5dp"
-            android:background="@drawable/round_body"
+            android:background="@color/white"
             android:padding="2dp"
             android:scaleType="fitXY" />
 
@@ -43,9 +43,6 @@
                 android:text="@string/num"
                 android:textColor="@color/white" />
 
-
         </LinearLayout>
-
-
     </LinearLayout>
 </androidx.cardview.widget.CardView>

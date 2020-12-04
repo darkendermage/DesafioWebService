@@ -28,10 +28,10 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginTop="90dp"
-            android:text="Nome do HQ"
+            android:text="@string/nameHQ"
             android:textAllCaps="true"
             android:textColor="@color/white"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/iv_fragDetail" />
@@ -42,9 +42,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="30dp"
-            android:text="dassadsadaddasd descricao"
+            android:text="@string/desc"
             android:textColor="@color/white"
-            android:textSize="18dp"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_titulo_fragDetail" />
 
@@ -54,9 +54,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="35dp"
-            android:text="Published: "
+            android:text="@string/publ"
             android:textColor="@color/white"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_descricao_fragDetail" />
@@ -65,9 +65,9 @@
             android:id="@+id/tv_published_fragDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DATA"
+            android:text="@string/data"
             android:textColor="@color/white"
-            android:textSize="18dp"
+            android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@id/tv_published"
             app:layout_constraintTop_toTopOf="@id/tv_published" />
 
@@ -77,9 +77,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:text="Price: $ "
+            android:text="@string/price"
             android:textColor="@color/white"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_published" />
@@ -88,7 +88,7 @@
             android:id="@+id/tv_price_fragDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/price"
+            android:text="@string/price2"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:inputType="date"
@@ -102,9 +102,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:text="Pages: "
+            android:text="@string/page"
             android:textColor="@color/white"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_price" />
@@ -113,9 +113,9 @@
             android:id="@+id/tv_pages_fragDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="PAGES"
+            android:text="@string/pageDetail"
             android:textColor="@color/white"
-            android:textSize="18dp"
+            android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@id/tv_pages"
             app:layout_constraintTop_toTopOf="@id/tv_pages" />
 

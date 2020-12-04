@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/fragmentListHQ"
-        android:name="br.com.digitalhouse.desafio3_webservices.FragmentListHQ"
+        android:name="br.com.digitalhouse.desafio3_webservices.model.FragmentListHQ"
         android:label="fragment_list_h_q"
         tools:layout="@layout/fragment_list_h_q" >
         <action
