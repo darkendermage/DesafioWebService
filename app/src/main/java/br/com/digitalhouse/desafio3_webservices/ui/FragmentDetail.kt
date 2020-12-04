@@ -1,4 +1,4 @@
-package br.com.digitalhouse.desafio3_webservices
+package br.com.digitalhouse.desafio3_webservices.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,11 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
-import br.com.digitalhouse.desafio3_webservices.comicsHQ.Result
+import br.com.digitalhouse.desafio3_webservices.R
+import br.com.digitalhouse.desafio3_webservices.model.Result
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_detail.view.*
 
 class FragmentDetail : Fragment() {
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

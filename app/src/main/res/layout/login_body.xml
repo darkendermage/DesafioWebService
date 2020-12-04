@@ -49,7 +49,7 @@
 
 
     <CheckBox
-        android:id="@+id/checkboxLogin"
+        android:id="@+id/cbLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:buttonTint="@color/redMarvel"
@@ -68,7 +68,7 @@
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/btn_cadastre_se"
+        android:id="@+id/btn_cadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

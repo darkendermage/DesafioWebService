@@ -1,4 +1,4 @@
-package br.com.digitalhouse.desafio3_webservices.comicsHQ
+package br.com.digitalhouse.desafio3_webservices.model
 import com.google.gson.annotations.SerializedName
 
 data class Comics (
@@ -9,5 +9,5 @@ data class Comics (
 	@SerializedName("attributionText") val attributionText : String,
 	@SerializedName("attributionHTML") val attributionHTML : String,
 	@SerializedName("etag") val etag : String,
-	@SerializedName("data") val data : DataComics
+	@SerializedName("data") val data : DataComic
 )

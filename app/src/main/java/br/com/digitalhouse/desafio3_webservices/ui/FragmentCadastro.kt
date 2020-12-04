@@ -1,4 +1,4 @@
-package br.com.digitalhouse.desafio3_webservices
+package br.com.digitalhouse.desafio3_webservices.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import br.com.digitalhouse.desafio3_webservices.R
 import kotlinx.android.synthetic.main.cadastro_body.view.*
 import kotlinx.android.synthetic.main.fragment_cadastro.view.*
 

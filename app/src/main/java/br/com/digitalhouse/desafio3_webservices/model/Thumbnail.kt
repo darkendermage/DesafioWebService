@@ -1,4 +1,4 @@
-package br.com.digitalhouse.desafio3_webservices.comicsHQ
+package br.com.digitalhouse.desafio3_webservices.model
 import com.google.gson.annotations.SerializedName
 
 

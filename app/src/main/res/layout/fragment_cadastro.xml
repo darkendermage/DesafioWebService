@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blueDark"
-    tools:context=".FragmentCadastro">
+    tools:context=".ui.FragmentCadastro">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarRegister"

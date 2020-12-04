@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/blueDark"
     android:orientation="vertical"
-    tools:context=".FragmentImageHQ">
+    tools:context=".ui.FragmentImageHQ">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_fragImageHQ"

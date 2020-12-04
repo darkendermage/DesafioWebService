@@ -1,4 +1,4 @@
-package br.com.digitalhouse.desafio3_webservices
+package br.com.digitalhouse.desafio3_webservices.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,14 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
-import br.com.digitalhouse.desafio3_webservices.comicsHQ.Result
+import br.com.digitalhouse.desafio3_webservices.R
+import br.com.digitalhouse.desafio3_webservices.model.Result
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.*
-import kotlinx.android.synthetic.main.fragment_image_h_q.*
 import kotlinx.android.synthetic.main.fragment_image_h_q.view.*
-import kotlinx.android.synthetic.main.fragment_list_h_q.view.*
-import kotlinx.android.synthetic.main.item_hqs.*
-import kotlinx.android.synthetic.main.item_hqs.view.*
 
 class FragmentImageHQ : Fragment() {
 
@@ -37,6 +33,7 @@ class FragmentImageHQ : Fragment() {
     ): Result {
         val hq = arguments?.get("chave") as Result
 
+        //Pra pegar imagem
         picasso.load(hq.thumbnail.path.replace(
             "http://", "https://") +"."+ hq.thumbnail.extension)
             .into(view.iv_fragImage)

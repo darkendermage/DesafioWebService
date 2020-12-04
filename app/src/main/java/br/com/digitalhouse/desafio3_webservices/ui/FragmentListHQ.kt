@@ -1,4 +1,4 @@
-package br.com.digitalhouse.desafio3_webservices.model
+package br.com.digitalhouse.desafio3_webservices.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -13,10 +13,10 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.com.digitalhouse.desafio3_webservices.R
-import br.com.digitalhouse.desafio3_webservices.repository.serv
+import br.com.digitalhouse.desafio3_webservices.repository.service
 import kotlinx.android.synthetic.main.fragment_list_h_q.view.*
 
-class FragmentListHQ : Fragment(), ListHQAdapter.onClickHQ{
+class FragmentListHQ : Fragment(), ListHQAdapter.onClickHQ {
 
     var offset = 500
 
@@ -26,7 +26,7 @@ class FragmentListHQ : Fragment(), ListHQAdapter.onClickHQ{
     private val viewModel by viewModels<ListHQViewModel> {
         object : ViewModelProvider.Factory {
             override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-                return ListHQViewModel(serv) as T
+                return ListHQViewModel(service) as T
             }
         }
     }
@@ -35,6 +35,7 @@ class FragmentListHQ : Fragment(), ListHQAdapter.onClickHQ{
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         val view = inflater.inflate(R.layout.fragment_list_h_q, container, false)
 
         layoutManagerHQ = GridLayoutManager(context, 3)

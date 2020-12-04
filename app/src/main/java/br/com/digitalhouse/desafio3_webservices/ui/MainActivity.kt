@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         startNavigation()
     }
+
     private fun startNavigation() {
         navController = findNavController(R.id.nav_host_fragment_container)
     }

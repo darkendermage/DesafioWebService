@@ -1,6 +1,6 @@
 package br.com.digitalhouse.desafio3_webservices.repository
 
-import br.com.digitalhouse.desafio3_webservices.comicsHQ.Comics
+import br.com.digitalhouse.desafio3_webservices.model.Comics
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
@@ -20,4 +20,4 @@ val retrofit: Retrofit = Retrofit.Builder()
     .addConverterFactory(GsonConverterFactory.create())
     .build()
 
-val serv: Service = retrofit.create(Service::class.java)
+val service: Service = retrofit.create(Service::class.java)

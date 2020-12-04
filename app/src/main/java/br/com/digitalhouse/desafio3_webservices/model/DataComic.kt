@@ -1,7 +1,7 @@
-package br.com.digitalhouse.desafio3_webservices.comicsHQ
+package br.com.digitalhouse.desafio3_webservices.model
 import com.google.gson.annotations.SerializedName
 
-data class DataComics (
+data class DataComic (
 
 	@SerializedName("offset") val offset : Int,
 	@SerializedName("limit") val limit : Int,
