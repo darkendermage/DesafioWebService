@@ -19,21 +19,15 @@ class FragmentSplash : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_splash, container, false)
-
-        vaiParaLogin()
-
-
+        goLogin()
         return view
     }
 
-    private fun vaiParaLogin() {
+    private fun goLogin() {
         scope.launch {
-            delay(2000)
+            delay(5000)
             findNavController().navigate(R.id.action_fragmentSplash_to_fragmentLogin)
         }
     }
-
-
 }

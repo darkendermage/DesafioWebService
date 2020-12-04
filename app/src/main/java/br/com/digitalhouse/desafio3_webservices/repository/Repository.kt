@@ -8,7 +8,7 @@ import retrofit2.http.Query
 
 interface Service {
 
-    @GET("comics?ts=1&apikey=de99d1f85bca19d7f67799a145912104&hash=b2f3a542ff1d531011ebaf6da5efc591")
+    @GET("comics?ts=1&apikey=6eb7e8896ec5850c52515a8a23ee97f0&hash=40a3aa568bb269dfad85ae0c4a297181")
     suspend fun getAllHQRepo(
         @Query("offset") offset: Int
     ) : Comics
