@@ -1,4 +1,4 @@
-package br.com.digitalhouse.desafio3_webservices
+package br.com.digitalhouse.desafio3_webservices.model
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -12,12 +12,11 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import br.com.digitalhouse.desafio3_webservices.model.ListHQAdapter
-import br.com.digitalhouse.desafio3_webservices.model.ListHQViewModel
-import br.com.digitalhouse.desafio3_webservices.repository.repo
+import br.com.digitalhouse.desafio3_webservices.R
+import br.com.digitalhouse.desafio3_webservices.repository.serv
 import kotlinx.android.synthetic.main.fragment_list_h_q.view.*
 
-class FragmentListHQ : Fragment(), ListHQAdapter.onClickLIstenerHQ {
+class FragmentListHQ : Fragment(), ListHQAdapter.onClickHQ{
 
     var offset = 1
     private lateinit var adapterHQ: ListHQAdapter
@@ -26,7 +25,7 @@ class FragmentListHQ : Fragment(), ListHQAdapter.onClickLIstenerHQ {
     private val viewModel by viewModels<ListHQViewModel> {
         object : ViewModelProvider.Factory {
             override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-                return ListHQViewModel(repo) as T
+                return ListHQViewModel(serv) as T
             }
         }
     }
@@ -40,7 +39,6 @@ class FragmentListHQ : Fragment(), ListHQAdapter.onClickLIstenerHQ {
         layoutManagerHQ = GridLayoutManager(context, 3)
         view.rv_fragment_list_HQ.layoutManager = layoutManagerHQ
 
-        view.rv_fragment_list_HQ.setHasFixedSize(true)
 
         viewModel.listComics.observe(viewLifecycleOwner, {
             adapterHQ = ListHQAdapter(it, this)
@@ -52,14 +50,12 @@ class FragmentListHQ : Fragment(), ListHQAdapter.onClickLIstenerHQ {
 
         return view
     }
-
-    override fun hqClick(position: Int) {
+      override fun hqClick(position: Int) {
         viewModel.listComics.observe(this, {
             val selectHQ = it[position]
 
             val bundle = bundleOf("chave" to selectHQ)
             findNavController().navigate(R.id.action_fragmentListHQ_to_fragmentDetail, bundle)
-
         })
     }
 
@@ -69,21 +65,16 @@ class FragmentListHQ : Fragment(), ListHQAdapter.onClickLIstenerHQ {
                 override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                     super.onScrolled(recyclerView, dx, dy)
 
-                    var itensTotal = adapterHQ.itemCount
-                    var itensVisible = layoutManagerHQ.childCount
-                    var itensPass = layoutManagerHQ.findFirstVisibleItemPosition()
+                    val itensTotal = adapterHQ.itemCount
+                    val itensVisible = layoutManagerHQ.childCount
+                    val itensPass = layoutManagerHQ.findFirstVisibleItemPosition()
 
                     if ((itensVisible + itensPass) == itensTotal) {
                         offset++
                         viewModel.getListHQs(offset)
                     }
-
                 }
             })
-
         }
-
     }
-
-
 }

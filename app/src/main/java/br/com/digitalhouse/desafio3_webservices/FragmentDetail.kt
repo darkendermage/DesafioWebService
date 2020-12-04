@@ -74,7 +74,7 @@ class FragmentDetail : Fragment() {
             "http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b"
                 + "/landscape_large."
                 + "jpg")
-            .into(view.iv_capa_fragmentDetails)
+            .into(view.iv_fragDetail)
     }
 
 

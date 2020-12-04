@@ -32,22 +32,22 @@ class FragmentImageHQ : Fragment() {
     ): Result {
         val mostraHQ = arguments?.get("chave") as Result
 
-        val hqExibidoPath = mostraHQ.thumbnail.path
-        val hqExibidoExt = mostraHQ.thumbnail.extension
+        val hqPath = mostraHQ.thumbnail.path
+        val hqExt = mostraHQ.thumbnail.extension
         val imageHq = "/portrait_incredible."
-        val urlObj = hqExibidoPath + imageHq + hqExibidoExt
+        val uriObj = hqPath + imageHq + hqExt
 
-        picasso.load(urlObj).into(view.iv_fragImage)
+        picasso.load(uriObj).into(view.iv_fragImage)
         return mostraHQ
     }
 
+
     private fun backDetailsHQ(hqImg: Result, view: View) {
-        val bundleVolta = bundleOf("chave" to hqImg)
+
+        val bundle = bundleOf("chave" to hqImg)
         view.toolbar_fragImageHQ.setNavigationOnClickListener {
             findNavController().navigate(
-                R.id.action_fragmentImageHQ_to_fragmentDetail,
-                bundleVolta
-            )
+                R.id.action_fragmentImageHQ_to_fragmentDetail, bundle)
         }
     }
 }

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/blueDark"
-    tools:context=".FragmentListHQ">
+    tools:context=".model.FragmentListHQ">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
@@ -27,18 +27,19 @@
                 android:scaleType="fitXY"
                 android:padding="5dp"
                 android:src="@drawable/marvel_logo"
-                android:visibility="visible" />
+                android:visibility="visible"
+                android:contentDescription="TODO" />
         </LinearLayout>
 
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_fragment_list_HQ"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:layout_margin="10dp"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         app:spanCount="3"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         tools:listitem="@layout/item_hqs" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

@@ -11,8 +11,7 @@ import br.com.digitalhouse.desafio3_webservices.comicsHQ.Result
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_hqs.view.*
 
-class ListHQAdapter
-    (val listHQS: List<Result>, val listener: onClickLIstenerHQ) :
+class ListHQAdapter(val listHQ: List<Result>, val listener: FragmentListHQ) :
     RecyclerView.Adapter<ListHQAdapter.viewHolderHQ>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolderHQ {
@@ -21,30 +20,30 @@ class ListHQAdapter
     }
 
     override fun onBindViewHolder(holder: viewHolderHQ, position: Int) {
-        val hq = listHQS[position]
+        val hq = listHQ[position]
         val picasso = Picasso.get()
         val base = hq.thumbnail.path
-        val extension = hq.thumbnail.extension
         val tipoImagem = "/portrait_uncanny."
-        val url = base + tipoImagem + extension
+        val extension = hq.thumbnail.extension
+        val conc = base + tipoImagem + extension
 
         holder.numeroHQ.text = hq.id.toString()
-        picasso.load(url).into(holder.imagemCapaHQ)
+        picasso.load(conc).into(holder.imagemCapa)
 
         holder.itemView.setOnClickListener {
             listener.hqClick(position)
         }
     }
 
-    interface onClickLIstenerHQ {
+    interface onClickHQ{
         fun hqClick(position: Int)
     }
 
 
-    override fun getItemCount() = listHQS.size
+    override fun getItemCount() = listHQ.size
 
     inner class viewHolderHQ(view: View) : RecyclerView.ViewHolder(view) {
-        val imagemCapaHQ: ImageView = view.iv_itemHQ
+        val imagemCapa: ImageView = view.iv_iHQ
         val numeroHQ: TextView = view.tv_itemHQ
 
 
