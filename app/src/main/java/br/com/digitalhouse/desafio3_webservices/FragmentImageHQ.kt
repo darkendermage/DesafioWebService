@@ -9,7 +9,12 @@ import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import br.com.digitalhouse.desafio3_webservices.comicsHQ.Result
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.*
+import kotlinx.android.synthetic.main.fragment_image_h_q.*
 import kotlinx.android.synthetic.main.fragment_image_h_q.view.*
+import kotlinx.android.synthetic.main.fragment_list_h_q.view.*
+import kotlinx.android.synthetic.main.item_hqs.*
+import kotlinx.android.synthetic.main.item_hqs.view.*
 
 class FragmentImageHQ : Fragment() {
 
@@ -30,15 +35,12 @@ class FragmentImageHQ : Fragment() {
         picasso: Picasso,
         view: View
     ): Result {
-        val mostraHQ = arguments?.get("chave") as Result
+        val hq = arguments?.get("chave") as Result
 
-        val hqPath = mostraHQ.thumbnail.path
-        val hqExt = mostraHQ.thumbnail.extension
-        val imageHq = "/portrait_incredible."
-        val uriObj = hqPath + imageHq + hqExt
-
-        picasso.load(uriObj).into(view.iv_fragImage)
-        return mostraHQ
+        picasso.load(hq.thumbnail.path.replace(
+            "http://", "https://") +"."+ hq.thumbnail.extension)
+            .into(view.iv_fragImage)
+        return hq
     }
 
 

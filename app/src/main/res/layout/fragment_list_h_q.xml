@@ -27,8 +27,7 @@
                 android:scaleType="fitXY"
                 android:padding="5dp"
                 android:src="@drawable/marvel_logo"
-                android:visibility="visible"
-                android:contentDescription="TODO" />
+                android:visibility="visible"/>
         </LinearLayout>
 
     </androidx.appcompat.widget.Toolbar>
@@ -36,8 +35,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_fragment_list_HQ"
         android:layout_margin="10dp"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:spanCount="3"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         tools:listitem="@layout/item_hqs" />
